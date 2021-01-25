@@ -8,7 +8,8 @@ public class Creator{
 
     public static void Act(){
 
-        System.out.println("Hello! It a program for automatic crate a labs files.");
+        System.out.println("It a part of program for automatic crate a files.");
+        System.out.println("Create your own file army!!!");
         Scanner in = new Scanner(System.in);
 
         System.out.print("Type name of your files: ");
@@ -17,7 +18,7 @@ public class Creator{
         System.out.print("Input type of files (any, for example .txt or .xml): ");
         String type = in.nextLine();
 
-        System.out.print("Please, input a count of labs: ");
+        System.out.print("Please, input a count of files: ");
         int labCount = in.nextInt();
 
         new File("/Users/admin/Desktop/AutoLab").mkdirs();
@@ -27,11 +28,12 @@ public class Creator{
          try {
                 boolean created = lFile.createNewFile();
                 if (created)
-                    System.out.println("File number " + i + " with name"+ name +" and "+ type +" type, has been created!");
+                    System.out.println("File number " + i + " with name "+ name +" and "+ type +" type, has been created!");
             } catch (IOException ex) {
 
                 System.out.println(ex.getMessage());
             }
         }
     }
+
 }
